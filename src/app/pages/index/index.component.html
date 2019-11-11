@@ -1,0 +1,69 @@
+<app-header></app-header>
+
+
+
+
+<section class="section">
+
+
+  <div class="container">
+    <br>
+
+
+    <div class="col-lg-6 col-md-6 ml-auto mr-auto">
+      <div class="card card-coin card-plain">
+        <div class="card-header">
+
+          <img class="img-center img-fluid rounded-circle" src="../../../assets/img/download.jpg" />
+          <div class="btn-wrapper text-center">
+            <h3 class="mb-0">Connectez-vous avec vos identifiants</h3>
+
+
+          </div>
+
+        </div>
+        <div class="card-body ">
+
+
+          <form role="form" #myForm="ngForm" (ngSubmit)="onSubmit(myForm)" ngNativeValidate>
+            <div class="form-group mb-3">
+              <div class="input-group input-group-alternative" [ngClass]="{ 'input-group-focus': focus1 === true }">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="tim-icons icon-single-02  "> </i>
+                  </span>
+                </div>
+                <input class="form-control" placeholder="Username" name="username" ngModel required  type="text" minlength="3" (focus)="focus1 = true"
+                  (blur)="focus1 = false" />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group input-group-alternative" [ngClass]="{ 'input-group-focus': focus2 === true }">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="tim-icons icon-key-25"> </i>
+                  </span>
+                </div>
+                <input class="form-control" placeholder="Password" name="password" required minlength="6" ngModel   type="password" (focus)="focus2 = true"
+                  (blur)="focus2 = false" />
+              </div>
+            </div>
+            <div class="form-group mb-3">
+               <alert *ngIf="isLoginFailed" class="alert-with-icon" [type]="'warning alert-with-icon'">
+                <span class="tim-icons icon-bulb-63" data-notify="icon"> </span>
+                <span>
+                  <b> </b> {{errorMessage}}
+                </span>
+              </alert>
+            </div>
+            <div class="text-center">
+              <button class="btn  my-4" style="background: #3AC6EF;" type="submit">
+                Sign in
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
