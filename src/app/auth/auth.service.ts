@@ -18,8 +18,8 @@ const httpOptions = {
 })
 export class AuthService{
 
-  private loginUrl = 'http://localhost:8080/ForumEnsit/signin';
-  private signupUrl = 'http://localhost:8080/ForumEnsit/signup';
+  private loginUrl = 'https://forum-ensit-backend.herokuapp.com/ForumEnsit/signin';
+  private signupUrl = 'https://forum-ensit-backend.herokuapp.com/ForumEnsit/signup';
  
   constructor(private http: HttpClient,private router:Router) {
     
