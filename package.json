@@ -84,6 +84,7 @@
     "ngx-page-scroll": "^7.0.0",
     "ngx-page-scroll-core": "^7.0.0",
     "nouislider": "11.1.0",
+    "request": "^2.88.0",
     "rxjs": "6.5.3",
     "tslib": "1.10.0",
     "xlsx": "^0.15.1",
